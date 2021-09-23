@@ -3,14 +3,11 @@ class Player:
         self.rowPosition = intitalRow
         self.columnPosition = initialColumn
 
-    # TODO
+    # # TODO
     # def moveUp(self):
-
     # TODO
     # def moveDown(self):
-
     # TODO
     # def moveLeft(self):
-
     # TODO
     # def moveRight(self):
