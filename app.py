@@ -14,7 +14,8 @@ print("-----------------------------")
 # TODO
 # Create a new GameBoard called board
 # Create a new Player called played starting at position 3,2
-
+board = gameboard.GameBoard
+played = player.Player(3, 2)
 while True:
     board.printBoard(player.rowPosition, player.columnPosition)
     selection = input("Make a move: ")
