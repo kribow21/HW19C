@@ -36,9 +36,9 @@ class GameBoard:
 # iterate through each item in the lists of each list in the container above so J = PLAYER COLUMN
             for j in range(len(self.board[i])):
                 if i == playerRow and j == playerColumn:
-                    print("P")
+                    print("P",end="")
                 else:
-                    print(self.board[i][j])
+                    print(self.board[i][j], end="")
             print("")
     def checkMove(self, testRow, testColumn):
         if self.board[testRow][testColumn].find("*") != -1:
@@ -46,7 +46,7 @@ class GameBoard:
             return False
         return True
     def checkWin(self, playerRow, playerColumn):
-        if self.board[self, playerRow == self.winningRow and playerColumn == self.winningColumn]:
+        if self.board[playerRow == self.winningRow and playerColumn == self.winningColumn]:
             print("You won!")
             return True
         else:

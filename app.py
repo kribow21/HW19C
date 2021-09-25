@@ -1,6 +1,7 @@
 import gameboard
 import player
 
+
 print("Welcome to the game!")
 print("Instructions: ")
 print("To move up: w")
@@ -14,14 +15,16 @@ print("-----------------------------")
 # TODO
 # Create a new GameBoard called board
 # Create a new Player called played starting at position 3,2
-board = gameboard.GameBoard
+board = gameboard.GameBoard()
 played = player.Player(3, 2)
+print(played)
 
 while True:
     board.printBoard(played.rowPosition, played.columnPosition)
     selection = input("Make a move: ")
     if(selection == 'w'):
         played.moveUp
+        print(played.rowPosition)
     elif(selection == 's'):
         played.moveDown
     elif(selection == 'a'):
@@ -29,7 +32,7 @@ while True:
     elif(selection == 'd'):
         played.moveRight
     board.checkMove(played.rowPosition, played.columnPosition)
-    board.checkWin(played.rowPosition, played.columnPosition)
+    # board.checkWin(played.rowPosition, played.columnPosition)
 
     # TODO
     # Move the player through the board
