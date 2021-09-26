@@ -17,22 +17,22 @@ print("-----------------------------")
 # Create a new Player called played starting at position 3,2
 board = gameboard.GameBoard()
 played = player.Player(3, 2)
-print(played)
 
 while True:
     board.printBoard(played.rowPosition, played.columnPosition)
     selection = input("Make a move: ")
     if(selection == 'w'):
-        played.moveUp
-        print(played.rowPosition)
+        played.moveUp()
     elif(selection == 's'):
-        played.moveDown
+        played.moveDown()
     elif(selection == 'a'):
-        played.moveLeft
+        played.moveLeft()
     elif(selection == 'd'):
-        played.moveRight
+        played.moveRight()
     board.checkMove(played.rowPosition, played.columnPosition)
-    # board.checkWin(played.rowPosition, played.columnPosition)
+    if(board.checkWin(played.rowPosition, played.columnPosition) == True):
+        print("You won!")
+        break
 
     # TODO
     # Move the player through the board
