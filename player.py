@@ -11,7 +11,7 @@ class Player:
         self.rowPosition +=1
     # TODO
     def moveLeft(self):
-        self.columnPosition +=1
+        self.columnPosition -=1
     # TODO
     def moveRight(self):
-        self.columnPosition -=1
+        self.columnPosition +=1
