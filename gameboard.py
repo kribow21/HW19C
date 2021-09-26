@@ -45,9 +45,8 @@ class GameBoard:
             print("Can't move there!")
             return False
         return True
-    def checkWin(self, playerRow, playerColumn):
-        if self.board[playerRow == self.winningRow and playerColumn == self.winningColumn]:
-            print("You won!")
+    def checkWin(self, currentRow, currentColumn):
+        if currentRow == self.winningRow and currentColumn == self.winningColumn:
             return True
         else:
             return False
